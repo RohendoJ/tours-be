@@ -115,7 +115,7 @@ export const getTours = async (userId: string, page = 1, limit = 10) => {
     take: limit,
   });
 
-  if (!tours) {
+  if (tours.length === 0) {
     throw new HTTPExecption(404, "Tours not found");
   }
 
