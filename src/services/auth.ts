@@ -11,6 +11,7 @@ import {
   ACCESS_TOKEN_SECRET,
 } from "../config";
 import { HTTPExecption } from "../middlewares";
+
 export const register = async (request: registerDto) => {
   logger.info("Registering new user", { service: "auth-service" });
 
